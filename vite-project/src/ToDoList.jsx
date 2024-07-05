@@ -15,6 +15,10 @@ const ToDoList = () => {
     }
   }
 
+  function removeTask() {
+    setTasks([]);
+  }
+
   function deleteTask(index) {
     const updatedTasks = tasks.filter((_, i) => i !== index);
     setTasks(updatedTasks);
@@ -60,7 +64,7 @@ const ToDoList = () => {
           Add
         </button>
 
-        <button className="clear-button" onClick={addTask}>
+        <button className="clear-button" onClick={removeTask}>
           Clear
         </button>
       </div>
