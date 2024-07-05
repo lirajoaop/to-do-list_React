@@ -59,6 +59,10 @@ const ToDoList = () => {
         <button className="add-button" onClick={addTask}>
           Add
         </button>
+
+        <button className="clear-button" onClick={addTask}>
+          Clear
+        </button>
       </div>
 
       <ol>
