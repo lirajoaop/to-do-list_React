@@ -26,6 +26,7 @@ button {
 
 .add-button {
   background-color: hsl(125, 47%, 54%);
+  margin-left: 10px;
 }
 
 .add-button:hover {
@@ -58,6 +59,10 @@ input[type="text"] {
 
 ol {
   padding: 0;
+  max-width: 45rem;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 2rem;
 }
 
 li {
