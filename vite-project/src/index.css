@@ -274,8 +274,9 @@ li {
   }
 
   .text {
-    margin-bottom: 5px;
-    font-size: 1rem;
+    margin-bottom: 16px;
+    margin-top: 12px;
+    font-size: 1.3rem;
   }
 
   .delete-button,
@@ -288,13 +289,13 @@ li {
   input[type="checkbox"] {
     width: 0.8em;
     height: 2em;
-    margin: 2px 0;
+    margin: 1px 0;
   }
 
   input[type="checkbox"]:checked {
     width: 0.8em;
     height: 2em;
-    margin: 2px 0;
+    margin: 1px 0;
   }
 
   input[type="checkbox"]:checked::after {
