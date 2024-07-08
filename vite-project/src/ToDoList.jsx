@@ -92,6 +92,8 @@ const ToDoList = () => {
             <button className="move-button" onClick={() => moveTaskDown(index)}>
               ⬇️
             </button>
+
+            <input type="checkbox" id="check-button" />
           </li>
         ))}
       </ol>

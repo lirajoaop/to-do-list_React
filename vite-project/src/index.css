@@ -67,6 +67,47 @@ button {
   background-color: #1c86ee;
 }
 
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 47px;
+  height: 47px;
+  padding: 8px 12px;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: hsl(0, 0%, 40%);
+  border: 2px solid hsl(0, 0%, 50%);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Estilo da checkbox marcada */
+input[type="checkbox"]:checked {
+  background-color: hsl(145, 63%, 42%);
+  border-color: hsl(145, 63%, 50%);
+  position: relative;
+}
+
+input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background-color: hsl(0, 0%, 100%);
+  transform: translate(-50%, -50%);
+  clip-path: polygon(
+    14% 44%,
+    0% 28%,
+    22% 5%,
+    50% 32%,
+    94% -7%,
+    100% 3%,
+    52% 98%
+  );
+}
+
 input[type="text"] {
   font-size: 1.6rem;
   padding: 10px;
