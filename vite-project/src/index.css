@@ -7,8 +7,8 @@ html {
 
 body {
   min-height: 100%;
-  margin: 0; /* Remove a margem padrão */
-  padding: 0; /* Remove o padding padrão */
+  margin: 0; /* reset */
+  padding: 0; /* reset */
 }
 
 .to-do-list {
@@ -200,7 +200,7 @@ li {
   }
 
   .text {
-    font-size: 1.5rem; /* Reduz o tamanho da fonte em telas menores */
+    font-size: 1.5rem;
   }
 
   .enter-a-task-container {
@@ -241,8 +241,9 @@ li {
     display: flex;
     text-align: center;
     align-items: center;
-    justify-content: center;
-    width: 75%;
+    justify-content: flex-start;
+    width: 90%;
+    margin: 0 auto;
   }
 
   .buttons-task {
