@@ -33,7 +33,7 @@ button {
   transition: background-color 0.3s ease;
 }
 
-.enter-a-task {
+.enter-a-task-container {
   display: flex;
   text-align: center;
   align-items: center;
@@ -59,6 +59,12 @@ button {
   background-color: #ff8c00;
 }
 
+.buttons-task {
+  display: flex;
+  text-align: center;
+  gap: 0.7rem;
+}
+
 .delete-button {
   background-color: #ff6347;
 }
@@ -78,15 +84,15 @@ button {
 input[type="checkbox"] {
   -webkit-appearance: none;
   -moz-appearance: none;
-  width: 47px;
-  height: 47px;
+  width: 40px;
+  height: 40px;
   padding: 8px 12px;
-  margin-left: 10px;
   border-radius: 5px;
   cursor: pointer;
   background-color: hsl(0, 0%, 40%);
   border: 2px solid hsl(0, 0%, 50%);
   transition: background-color 0.3s ease, border-color 0.3s ease;
+  margin-left: 5px;
 }
 
 /* Estilo da checkbox marcada */
@@ -125,6 +131,7 @@ input[type="text"] {
   background-color: #333333;
   width: calc(100% - 40px);
   max-width: 600px;
+  flex-grow: 1;
 }
 .tasks {
   display: flex;
@@ -170,17 +177,17 @@ li {
   min-width: 200px;
   max-width: 100%; /* Limit the text width within the list item */
   overflow-wrap: break-word; /* Ensure text wraps within the text div */
+  text-align: left;
 }
 
 .move-button {
   padding: 8px 12px;
   font-size: 1.4rem;
-  margin-left: 10px;
 }
 .delete-button {
   padding: 12px 6px;
   font-size: 1.2rem;
-  margin-left: 10px;
+  margin-left: 5px;
 }
 
 @media screen and (max-width: 1020px) {
@@ -196,11 +203,12 @@ li {
     font-size: 1.5rem; /* Reduz o tamanho da fonte em telas menores */
   }
 
-  .delete-button,
-  .move-button {
-    padding: 6px 9px; /* Ajusta o padding para telas menores */
-    font-size: 1rem; /* Reduz o tamanho da fonte dos botões */
-    margin-left: 5px; /* Reduz a margem entre os botões */
+  .enter-a-task-container {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5rem;
   }
 
   input[type="checkbox"],
@@ -209,7 +217,6 @@ li {
     width: 35px;
     height: 35px;
     padding: 8px 12px;
-    margin-left: 5px;
   }
 }
 
@@ -220,13 +227,28 @@ li {
 
   button {
     font-size: 1.5rem;
-    padding: 8px 16px;
+    padding: 4px 8px;
   }
 
   .add-button,
   .clear-button {
-    margin-top: 25px;
-    margin-left: 15px;
+    width: 3rem;
+    height: 2rem;
+    font-size: 0.8rem;
+  }
+
+  .enter-a-task-container {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+  }
+
+  .buttons-task {
+    display: flex;
+    text-align: center;
+    gap: 0.5rem;
   }
 
   input[type="text"] {
@@ -258,20 +280,22 @@ li {
     font-size: 0.9rem;
   }
 
-  input[type="checkbox"] {
-    width: 30px;
-    height: 30px;
-    padding: 4px 6px;
+  .delete-button {
     margin-left: 5px;
   }
 
+  input[type="checkbox"] {
+    width: 0.8em;
+    height: 2em;
+  }
+
   input[type="checkbox"]:checked {
-    width: 30px;
-    height: 30px;
+    width: 0.8em;
+    height: 2em;
   }
 
   input[type="checkbox"]:checked::after {
-    width: 0.8em;
-    height: 0.8em;
+    width: 0.1em;
+    height: 0.1em;
   }
 }
