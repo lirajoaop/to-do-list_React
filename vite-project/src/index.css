@@ -96,7 +96,6 @@ input[type="checkbox"] {
   margin-left: 5px;
 }
 
-/* Estilo da checkbox marcada */
 input[type="checkbox"]:checked {
   background-color: hsl(145, 63%, 42%);
   border-color: hsl(145, 63%, 50%);
@@ -212,12 +211,20 @@ li {
     margin-right: 5rem;
   }
 
-  input[type="checkbox"],
-  input[type="checkbox"]:checked,
-  input[type="checkbox"]:checked::after {
+  input[type="checkbox"] {
     width: 35px;
     height: 35px;
     padding: 8px 12px;
+  }
+
+  input[type="checkbox"]:checked {
+    width: 35px;
+    height: 35px;
+  }
+
+  input[type="checkbox"]:checked::after {
+    width: 15px;
+    height: 15px;
   }
 }
 
@@ -301,8 +308,8 @@ li {
   }
 
   input[type="checkbox"]:checked::after {
-    width: 0.1em;
-    height: 0.1em;
+    width: 0.9em;
+    height: 0.9em;
     margin: 2px 0;
   }
 }
